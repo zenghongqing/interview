@@ -190,12 +190,12 @@ function jsonp(url, jsonpCallback, success) {
 ```
 * CORS: Access-Control-Allow-Origin: *
 * postMessage, 监听message事件
-9. https流程
 
-1.客户端：发送random1 + 支持的加密算法 + SSL Version等信息
-2.服务端：发送random2 + 选择的加密算法A + 证书
-3.客户端：验证证书 + 公钥加密的random3
-4.服务端：解密random3，此时两端共有random1，random2，random3，使用这3个随机数通过加密算法计算对称密钥即可。
+9. https流程
+* 客户端：发送random1 + 支持的加密算法 + SSL Version等信息
+* 服务端：发送random2 + 选择的加密算法A + 证书
+* 客户端：验证证书 + 公钥加密的random3
+* 服务端：解密random3，此时两端共有random1，random2，random3，使用这3个随机数通过加密算法计算对称密钥即可。
 
 10. 将静态资源放在独立域名下有什么好处？
 1 静态资源http请求不携带cookie，减少网站流量。2 动静分离有利于cdn。3 浏览器对于统一域名的下载线程有限（6个），优化下载速度。4 方便公司其他项目的使用。5 客户端缓存后 不同页面引用相同文件将直接从本地获取，无需下载
