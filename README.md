@@ -191,6 +191,7 @@ function jsonp(url, jsonpCallback, success) {
 * CORS: Access-Control-Allow-Origin: *
 * postMessage, 监听message事件
 9. https流程
+
 1.客户端：发送random1 + 支持的加密算法 + SSL Version等信息
 2.服务端：发送random2 + 选择的加密算法A + 证书
 3.客户端：验证证书 + 公钥加密的random3
